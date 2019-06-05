@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+
