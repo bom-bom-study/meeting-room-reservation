@@ -12,13 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class UserTest {
     @Test
     public void testCreateUser() {
-        User user = User.builder()
-                .id("jobata")
-                .pw("1234")
-                .name("조현우")
-                .position("부팀장")
-                .department("백엔드")
-                .build();
-        assertThat(user.getId()).isEqualTo("jobata");
+        User user = User.from(new UserDto("jobata", "1234", "조현우", "부팀장", "백엔드"));
+        assertThat(user.getUserId()).isEqualTo("jobata");
     }
 }
